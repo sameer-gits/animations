@@ -1,7 +1,6 @@
 :root {
   --primary-color: antiquewhite;
   --secondary-color: aliceblue;
-  --spacing: 2rem;
 }
 
 body {
@@ -26,7 +25,7 @@ body {
 }
 
 .container {
-  padding: var(--spacing);
+  padding: 2rem;
   border-radius: 2.5rem;
   height: 100%;
   background-color: var(--secondary-color);
@@ -45,14 +44,14 @@ body {
 }
 
 .button {
-  padding: 1rem var(--spacing);
+  padding: 1rem 2rem;
   font-family: "Space Grotesk", sans-serif;
   background-color: var(--primary-color);
   font-weight: 700;
   border: 2px solid black;
   width: fit-content;
   border-radius: 9999px;
-  margin-top: 2rem;
+  margin-top: auto;
   margin-left: auto;
   margin-right: auto;
 }
@@ -61,10 +60,16 @@ body {
   z-index: 1;
   height: 80%;
   max-height: 700px;
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
+  top: calc(-2rem + 50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: fit-content;
+  position: absolute;
+}
+
+.can.mask {
+  opacity: 50%;
+  fill: red;
 }
 
 /* Hover */
