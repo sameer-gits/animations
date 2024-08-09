@@ -67,6 +67,13 @@ body {
   position: absolute;
 }
 
+.mask {
+  mask-image: url(mask.png);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
 /* Hover */
 
 .button:hover {
