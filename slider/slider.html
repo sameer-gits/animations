@@ -11,15 +11,18 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="scripts.js"></script>
   </head>
   <body>
     <div class="main">
       <div class="container">
         <h1 class="main-heading">Pineapple</h1>
-        <img class="can" src="can.png" alt="Can image" />
-        <img class="can mask" src="label.jpg" alt="Can image" />
+        <img id="can" class="can" src="can.png" alt="Can image" />
+        <img id="can-1" class="can" src="can.png" alt="Can image" />
+        <div class="can mask">
+          <img id="label" class="label" src="label.jpg" alt="label" />
+        </div>
         <button class="button" onclick="slide()">Slide it!</button>
+        <script src="scripts.js"></script>
       </div>
     </div>
   </body>
