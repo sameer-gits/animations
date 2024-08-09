@@ -67,11 +67,6 @@ body {
   position: absolute;
 }
 
-.can.mask {
-  opacity: 50%;
-  fill: red;
-}
-
 /* Hover */
 
 .button:hover {
