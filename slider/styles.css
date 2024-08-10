@@ -23,6 +23,7 @@ body {
   padding: 2rem;
   background-color: var(--primary-color);
   position: relative;
+  overflow: hidden;
 }
 
 .container {
