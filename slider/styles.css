@@ -22,6 +22,7 @@ body {
   width: 100vw;
   padding: 2rem;
   background-color: var(--primary-color);
+  position: relative;
 }
 
 .container {
@@ -31,7 +32,6 @@ body {
   background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
-  position: relative;
   overflow: hidden;
 }
 
@@ -55,6 +55,7 @@ body {
   margin-top: auto;
   margin-left: auto;
   margin-right: auto;
+  z-index: 3;
 }
 
 .can {
@@ -68,11 +69,6 @@ body {
   position: absolute;
 }
 
-#can-1 {
-  z-index: 3;
-  opacity: 0;
-}
-
 .mask {
   mask-image: url(mask.png);
   mix-blend-mode: multiply;
@@ -81,13 +77,26 @@ body {
   mask-position: center;
 }
 
-.label {
-  transition: transform 200ms; /* Correct property for transitioning */
-  transform: translate(-35%, 0%);
+.mask-linear {
+  height: calc(100% - 2rem);
+  width: calc(100% - 2rem);
+  top: 1rem;
+  left: 1rem;
+  position: absolute;
+  mask: linear-gradient(#000 0 0),
+    linear-gradient(-90deg, #000 50%, #0000 0) content-box 100% 100% / 200% 200%
+      no-repeat;
+  mask-composite: exclude;
+  transition: 500ms;
+  padding: 2rem;
+  border-radius: 2.5rem;
+  z-index: 2;
 }
 
-.label.label-hover {
-  transform: translate(32%, 0%);
+.label {
+  transition: transform 500ms;
+  height: 100%;
+  transform: translate(-35%, 0%);
 }
 
 /* Hover */
