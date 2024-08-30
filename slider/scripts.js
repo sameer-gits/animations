@@ -9,18 +9,8 @@ function slide() {
   } else {
     mask.style.maskPosition = "0% 0%";
   }
-
-  if (pineapple.style.transform === `translate(-0%, -50%)`) {
-    pineapple.style.transform = `translate(-50%, -50%)`;
-  } else {
-    pineapple.style.transform = `translate(-0%, -50%)`;
-  }
-  if (orange.style.transform === `translate(-50%, -50%)`) {
-    orange.style.transform = `translate(0%, -50%)`;
-  } else {
-    orange.style.transform = `translate(-50%, -50%)`;
-  }
-
+  pineapple.classList.toggle("pineapple-heading");
+  orange.classList.toggle("orange-heading");
   console.log("Slide it!");
 }
 
@@ -28,7 +18,10 @@ const label1 = document.getElementById("label1");
 const label2 = document.getElementById("label2");
 const slice1 = document.getElementById("slice1");
 const slice2 = document.getElementById("slice2");
+const pineapple1 = document.getElementById("pineapple1");
+const pineapple2 = document.getElementById("pineapple2");
 const leaf = document.getElementById("leaf");
+const leafpineapple = document.getElementById("leaf-pineapple");
 
 document.addEventListener("mousemove", (e) => {
   const x = e.clientX;
@@ -56,9 +49,20 @@ document.addEventListener("mousemove", (e) => {
     2
   )}%, ${slice2percentageY.toFixed(2)}%)`;
 
+  pineapple1.style.transform = `translate(${slice1percentageX.toFixed(
+    2
+  )}%, ${slice1percentageY.toFixed(2)}%)`;
+
+  pineapple2.style.transform = `translate(${slice2percentageX.toFixed(
+    2
+  )}%, ${slice2percentageY.toFixed(2)}%)`;
+
   leaf.style.transform = `translate(${leafY.toFixed(2)}%, ${leafX.toFixed(
     2
   )}%)`;
+  leafpineapple.style.transform = `translate(${leafY.toFixed(
+    2
+  )}%, ${leafX.toFixed(2)}%)`;
   console.log("label1", label1percentageX.toFixed(2));
   console.log("label2", label2percentageX.toFixed(2));
 });
